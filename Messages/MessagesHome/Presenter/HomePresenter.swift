@@ -13,6 +13,7 @@ class HomePresenter<Routing: RoutingType> where Routing.Transition == MainTransi
     private let interactor: HomeInteractorType
     private let routing: Routing
     private let disposeBag = DisposeBag()
+    private let performActionSubject = PublishSubject<HomePostsAction>()
     
     init(interactor: HomeInteractorType, routing: Routing) {
         self.interactor = interactor
@@ -23,6 +24,10 @@ class HomePresenter<Routing: RoutingType> where Routing.Transition == MainTransi
 //MARK - HomePresenterType
 extension HomePresenter: HomePresenterType {
     
+    var onPerformAction: Observable<HomePostsAction> {
+        return performActionSubject.asObservable()
+    }
+    
     func showHomeView() {
         handleTransition(transition: .showHome(presenter: self))
     }
@@ -30,14 +35,24 @@ extension HomePresenter: HomePresenterType {
     func searchAllPosts() {
         interactor
             .searchAllPosts()
+            
             .subscribe(onSuccess: { [unowned self] in
                 self.interactor.updatePosts($0)
+                self.performActionSubject.onNext(.reloadData)
             })
             .disposed(by: disposeBag)
     }
     
     func reloadPosts() {
         searchAllPosts()
+    }
+}
+
+//MARK: - PostsDataSourceDelegate
+extension HomePresenter: PostsDataSourceDelegate {
+    
+    func getPosts(with postType: PostType) -> [Post] {
+        return interactor.getPosts(with: postType)
     }
 }
 

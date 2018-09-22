@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     
     private let presenter: HomePresenterType
     private let disposeBag = DisposeBag()
+    private let dataSource = PostsDataSource()
     
     init(presenter: HomePresenterType) {
         self.presenter = presenter
@@ -28,7 +29,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter.searchAllPosts()
+        setupPresenter()
     }
 }
 
@@ -40,6 +41,25 @@ private extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "reload-icon"), style: .plain, target: self, action: #selector(reloadPosts))
         optionsControl.setTitle(LocalizedString.all.localize(), forSegmentAt: 0)
         optionsControl.setTitle(LocalizedString.favorites.localize(), forSegmentAt: 1)
+        dataSource.delegate = presenter
+        postsTableView.registerNibForCell(with: PostInformationCell.self)
+        postsTableView.dataSource = dataSource
+        postsTableView.rowHeight = UITableViewAutomaticDimension
+        postsTableView.estimatedRowHeight = 44.0
+    }
+    
+    func setupPresenter() {
+        presenter.searchAllPosts()
+        
+        presenter
+            .onPerformAction
+            .subscribe(onNext: { [unowned self] in
+                switch $0 {
+                case .reloadData:
+                    self.postsTableView.reloadData()
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     @objc func reloadPosts() {

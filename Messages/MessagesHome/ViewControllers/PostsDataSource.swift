@@ -24,10 +24,13 @@ extension PostsDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell(frame: .zero)
+        guard let post = delegate?.getPosts(with: postsType)[indexPath.row] else {
+            return UITableViewCell(frame: .zero)
+        }
+        let cell = tableView.dequeueReusableCell(with: PostInformationCell.self, forIndexPath: indexPath)
+        cell.updateView(with: post)
+        return cell
     }
-    
-    
 }
 
 

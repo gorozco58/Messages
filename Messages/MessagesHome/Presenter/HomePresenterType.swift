@@ -9,7 +9,13 @@
 import Foundation
 import RxSwift
 
-protocol HomePresenterType {
+enum HomePostsAction {
+    case reloadData
+}
+
+protocol HomePresenterType: PostsDataSourceDelegate {
+    
+    var onPerformAction: Observable<HomePostsAction> { get }
     
     func showHomeView()
     func searchAllPosts()

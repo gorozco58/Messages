@@ -35,6 +35,7 @@
 		88635D7C2156A55C00CD2791 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D792156A55B00CD2791 /* LocalizedString.swift */; };
 		88635D7D2156A55C00CD2791 /* RoutingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D7A2156A55B00CD2791 /* RoutingType.swift */; };
 		88635D802156A5AE00CD2791 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D7F2156A5AE00CD2791 /* UIColorExtension.swift */; };
+		88635D822156AA1300CD2791 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D812156AA1300CD2791 /* UITableViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		88635D792156A55B00CD2791 /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		88635D7A2156A55B00CD2791 /* RoutingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingType.swift; sourceTree = "<group>"; };
 		88635D7F2156A5AE00CD2791 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		88635D812156AA1300CD2791 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		EE098D4C302A8F5A183162E3 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				88635D7F2156A5AE00CD2791 /* UIColorExtension.swift */,
+				88635D812156AA1300CD2791 /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				88635D302156775F00CD2791 /* MessagePresenterType.swift in Sources */,
 				88635D6C2156987700CD2791 /* PostsDataSource.swift in Sources */,
 				88635CF321566D1F00CD2791 /* AppDelegate.swift in Sources */,
+				88635D822156AA1300CD2791 /* UITableViewExtension.swift in Sources */,
 				88635D7B2156A55C00CD2791 /* ServiceUrl.swift in Sources */,
 				88635D802156A5AE00CD2791 /* UIColorExtension.swift in Sources */,
 				88635D702156A00E00CD2791 /* PostInformationCell.swift in Sources */,

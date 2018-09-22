@@ -31,6 +31,35 @@
                             <constraint firstAttribute="width" constant="30" id="aza-Ex-WYt"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-T8-3MA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X83-VE-BLE" customClass="GradientLoaderView" customModule="Messages" customModuleProvider="target">
+                                <rect key="frame" x="20" y="10" width="150" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6Eq-Tu-n6d"/>
+                                    <constraint firstAttribute="height" constant="20" id="sDr-aE-7g5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-gk-GXo" customClass="GradientLoaderView" customModule="Messages" customModuleProvider="target">
+                                <rect key="frame" x="20" y="40" width="200" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="daG-UH-crk"/>
+                                    <constraint firstAttribute="width" constant="200" id="v5a-Fx-ebz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YEh-gk-GXo" firstAttribute="top" secondItem="X83-VE-BLE" secondAttribute="bottom" constant="10" id="107-Cb-AgG"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YEh-gk-GXo" secondAttribute="bottom" constant="9" id="33w-on-Y3D"/>
+                            <constraint firstItem="X83-VE-BLE" firstAttribute="top" secondItem="MEO-T8-3MA" secondAttribute="top" constant="10" id="V23-HM-LN4"/>
+                            <constraint firstItem="YEh-gk-GXo" firstAttribute="leading" secondItem="MEO-T8-3MA" secondAttribute="leading" constant="20" id="gIt-yh-FMY"/>
+                            <constraint firstItem="X83-VE-BLE" firstAttribute="leading" secondItem="MEO-T8-3MA" secondAttribute="leading" constant="20" id="xBm-2O-AGP"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-kq-Xnl">
                         <rect key="frame" x="20" y="37" width="244" height="21.5"/>
                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
@@ -39,9 +68,13 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="MEO-T8-3MA" secondAttribute="bottom" id="1TI-73-L8G"/>
                     <constraint firstItem="fFm-kq-Xnl" firstAttribute="top" secondItem="bzn-oD-4DQ" secondAttribute="bottom" constant="6" id="4tg-Te-agl"/>
+                    <constraint firstItem="MEO-T8-3MA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6hK-Un-6Om"/>
                     <constraint firstItem="bzn-oD-4DQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="E24-32-y8v"/>
                     <constraint firstItem="G6z-hK-t3p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TJt-EJ-2fA"/>
+                    <constraint firstItem="MEO-T8-3MA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xv8-ye-WJF"/>
+                    <constraint firstAttribute="trailing" secondItem="MEO-T8-3MA" secondAttribute="trailing" id="XwQ-wK-eY8"/>
                     <constraint firstItem="G6z-hK-t3p" firstAttribute="leading" secondItem="fFm-kq-Xnl" secondAttribute="trailing" constant="10" id="ajK-Zy-5FK"/>
                     <constraint firstAttribute="trailing" secondItem="G6z-hK-t3p" secondAttribute="trailing" constant="16" id="gIZ-BB-vZd"/>
                     <constraint firstAttribute="bottom" secondItem="fFm-kq-Xnl" secondAttribute="bottom" constant="10" id="gvk-xe-q5V"/>
@@ -53,9 +86,12 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="fFm-kq-Xnl" id="ze4-sN-tjU"/>
+                <outlet property="loadersContainerView" destination="MEO-T8-3MA" id="b97-4c-Nar"/>
                 <outlet property="titleLabel" destination="bzn-oD-4DQ" id="gQM-kf-RTD"/>
+                <outletCollection property="loaderViews" destination="X83-VE-BLE" collectionClass="NSMutableArray" id="iTx-pq-OTS"/>
+                <outletCollection property="loaderViews" destination="YEh-gk-GXo" collectionClass="NSMutableArray" id="3E0-NI-f0C"/>
             </connections>
-            <point key="canvasLocation" x="54" y="34"/>
+            <point key="canvasLocation" x="54" y="33.5"/>
         </tableViewCell>
     </objects>
     <resources>
