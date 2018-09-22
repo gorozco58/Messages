@@ -34,6 +34,11 @@ extension MessagesMainRouting: RoutingType {
         case .showPostDetail(let post):
             let detailModule = MessageDetailModule(navigationController: navigationController, with: post)
             detailModule.showDetailView()
+        case .showConfirmationAlert(let handler):
+            let alert = UIAlertController(title: LocalizedString.alert.localize(), message: LocalizedString.deleteMessage.localize(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: LocalizedString.deleteAll.localize(), style: .destructive, handler: handler))
+            alert.addAction(UIAlertAction(title: LocalizedString.cancel.localize(), style: .default, handler: nil))
+            navigationController.present(alert, animated: true, completion: completion)
         }
     }
 }

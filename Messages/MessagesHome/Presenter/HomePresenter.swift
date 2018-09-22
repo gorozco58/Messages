@@ -52,6 +52,7 @@ extension HomePresenter: HomePresenterType {
 //MARK: - PostsDataSourceDelegate
 extension HomePresenter: PostsDataSourceDelegate {
     
+    
     func getPosts(with postType: PostType) -> [Post] {
         return interactor.getPosts(with: postType)
     }
@@ -59,6 +60,18 @@ extension HomePresenter: PostsDataSourceDelegate {
     func postSelected(_ post: Post) {
         interactor.markPostAsRead(post)
         handleTransition(transition: .showPostDetail(post: post))
+    }
+    
+    func deletePost(_ post: Post) {
+        interactor.deletePost(post)
+    }
+    
+    func deleteAllPosts() {
+        let transition = MainTransition.showConfirmationAlert { [unowned self] action in
+            self.interactor.deleteAllPosts()
+            self.performActionSubject.onNext(.reloadData)
+        }
+        handleTransition(transition: transition)
     }
 }
 

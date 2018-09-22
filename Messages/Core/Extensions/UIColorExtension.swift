@@ -21,4 +21,8 @@ extension UIColor {
     class var tintGreen: UIColor {
         return UIColor(red: 0, green: 204/255, blue: 0, alpha: 1)
     }
+    
+    class var gold: UIColor {
+        return UIColor(red: 255/255, green: 242/255, blue: 51/255, alpha: 1)
+    }
 }

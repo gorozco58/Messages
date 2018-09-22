@@ -45,6 +45,13 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-star-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ki6-J7-bhd">
+                        <rect key="frame" x="4" y="28" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="aJR-cz-edI"/>
+                            <constraint firstAttribute="width" constant="12" id="hf7-Yy-yOd"/>
+                        </constraints>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forward-arrow-icon" translatesAutoresizingMaskIntoConstraints="NO" id="G6z-hK-t3p">
                         <rect key="frame" x="274" y="19" width="30" height="30"/>
                         <constraints>
@@ -103,17 +110,20 @@
                     <constraint firstItem="MEO-T8-3MA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xv8-ye-WJF"/>
                     <constraint firstAttribute="trailing" secondItem="MEO-T8-3MA" secondAttribute="trailing" id="XwQ-wK-eY8"/>
                     <constraint firstItem="I1r-oU-cSK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZCf-U1-4Ec"/>
+                    <constraint firstItem="Ki6-J7-bhd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="Zkd-Yt-yxw"/>
                     <constraint firstItem="G6z-hK-t3p" firstAttribute="leading" secondItem="fFm-kq-Xnl" secondAttribute="trailing" constant="10" id="ajK-Zy-5FK"/>
                     <constraint firstAttribute="trailing" secondItem="G6z-hK-t3p" secondAttribute="trailing" constant="16" id="gIZ-BB-vZd"/>
                     <constraint firstAttribute="bottom" secondItem="fFm-kq-Xnl" secondAttribute="bottom" constant="10" id="gvk-xe-q5V"/>
                     <constraint firstItem="bzn-oD-4DQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jcF-Hd-pSd"/>
                     <constraint firstItem="G6z-hK-t3p" firstAttribute="leading" secondItem="bzn-oD-4DQ" secondAttribute="trailing" constant="10" id="k05-GR-Mst"/>
+                    <constraint firstItem="Ki6-J7-bhd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lHE-A6-6Pg"/>
                     <constraint firstItem="fFm-kq-Xnl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yVx-pD-PiB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="fFm-kq-Xnl" id="ze4-sN-tjU"/>
+                <outlet property="favoriteImageView" destination="Ki6-J7-bhd" id="q13-5p-d48"/>
                 <outlet property="loadersContainerView" destination="MEO-T8-3MA" id="b97-4c-Nar"/>
                 <outlet property="readPointView" destination="I1r-oU-cSK" id="RTQ-rq-pON"/>
                 <outlet property="titleLabel" destination="bzn-oD-4DQ" id="gQM-kf-RTD"/>
@@ -124,6 +134,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="check-star-icon" width="30" height="30"/>
         <image name="forward-arrow-icon" width="30" height="30"/>
     </resources>
 </document>

@@ -6,9 +6,10 @@
 //  Copyright © 2018 Giovanny Orozco. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum MainTransition {
     case showHome(presenter: HomePresenterType)
     case showPostDetail(post: Post)
+    case showConfirmationAlert(handler: (UIAlertAction) -> Void)
 }

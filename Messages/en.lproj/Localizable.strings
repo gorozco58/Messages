@@ -10,3 +10,7 @@
 "post" = "Post";
 "all" = "All";
 "favorites" = "Favorites";
+"deleteAll" = "Delete All";
+"alert" = "Alert";
+"deleteMessage" = "Do you want to delete all posts?";
+"cancel" = "Cancel";

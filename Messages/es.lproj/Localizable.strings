@@ -10,3 +10,7 @@
 "post" = "Publicación";
 "all" = "Todos";
 "favorites" = "Favoritos";
+"deleteAll" = "Borrar Todos";
+"alert" = "Alerta";
+"deleteMessage" = "Desea eliminar todas las publicaciones?";
+"cancel" = "Cancelar";

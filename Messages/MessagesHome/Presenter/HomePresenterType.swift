@@ -20,4 +20,5 @@ protocol HomePresenterType: PostsDataSourceDelegate {
     func showHomeView()
     func searchAllPosts()
     func reloadPosts()
+    func deleteAllPosts()
 }

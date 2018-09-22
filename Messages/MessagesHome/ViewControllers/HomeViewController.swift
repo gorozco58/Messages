@@ -12,6 +12,7 @@ import RxSwift
 class HomeViewController: UIViewController {
     @IBOutlet private weak var postsTableView: UITableView!
     @IBOutlet private weak var optionsControl: UISegmentedControl!
+    @IBOutlet private weak var deleteButton: UIButton!
     
     private let presenter: HomePresenterType
     private let disposeBag = DisposeBag()
@@ -46,12 +47,14 @@ private extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "reload-icon"), style: .plain, target: self, action: #selector(reloadPosts))
         optionsControl.setTitle(LocalizedString.all.localize(), forSegmentAt: 0)
         optionsControl.setTitle(LocalizedString.favorites.localize(), forSegmentAt: 1)
+        deleteButton.titleLabel?.text = LocalizedString.deleteAll.localize()
         dataSource.delegate = presenter
         postsTableView.registerNibForCell(with: PostInformationCell.self)
         postsTableView.dataSource = dataSource
         postsTableView.delegate = dataSource
         postsTableView.rowHeight = UITableViewAutomaticDimension
         postsTableView.estimatedRowHeight = 44.0
+        postsTableView.tableFooterView = UIView()
     }
     
     func setupPresenter() {
@@ -80,5 +83,9 @@ private extension HomeViewController {
         }
         dataSource.postsType = postType
         postsTableView.reloadData()
+    }
+    
+    @IBAction func deleteAllPressed() {
+        presenter.deleteAllPosts()
     }
 }

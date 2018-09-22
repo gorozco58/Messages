@@ -12,6 +12,7 @@ protocol TitleBodyType {
     var title: String { get }
     var body: String { get }
     var isRead: Bool { get }
+    var postType: PostType { get }
 }
 protocol Mockable {
     var isMock: Bool { get }

@@ -47,7 +47,11 @@ extension HomeInteractor: HomeInteractorType {
     }
     
     func getPosts(with type: PostType) -> [Post] {
-        return allPosts.filter { $0.postType == type }
+        if type == .normal {
+            return allPosts
+        } else {
+            return allPosts.filter { $0.postType == type }
+        }
     }
     
     func createLoadingPosts() -> [Post] {
@@ -56,5 +60,13 @@ extension HomeInteractor: HomeInteractorType {
     
     func markPostAsRead(_ post: Post) {
         post.isRead = true
+    }
+    
+    func deletePost(_ post: Post) {
+        allPosts = allPosts.filter { $0.postId != post.postId }
+    }
+    
+    func deleteAllPosts() {
+        allPosts = []
     }
 }

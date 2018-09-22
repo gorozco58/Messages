@@ -15,4 +15,6 @@ protocol HomeInteractorType {
     func getPosts(with type: PostType) -> [Post]
     func createLoadingPosts() -> [Post]
     func markPostAsRead(_ post: Post)
+    func deletePost(_ post: Post)
+    func deleteAllPosts()
 }

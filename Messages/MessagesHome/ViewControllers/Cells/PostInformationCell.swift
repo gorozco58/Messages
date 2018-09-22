@@ -12,19 +12,25 @@ class PostInformationCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var readPointView: UIView!
+    @IBOutlet private weak var favoriteImageView: UIImageView!
     @IBOutlet private weak var loadersContainerView: UIView!
     @IBOutlet private var loaderViews: [GradientLoaderView]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        let image = #imageLiteral(resourceName: "check-star-icon").withRenderingMode(.alwaysTemplate)
+        favoriteImageView.image = image
+        favoriteImageView.tintColor = .gold
     }
 
     func updateView(with info: Mockable & TitleBodyType) {
         configureLoadingViews(loading: info.isMock)
         titleLabel.text = info.title
         descriptionLabel.text = info.body
+        favoriteImageView.isHidden = info.postType != .favorite
         markAsRead(isRead: info.isRead)
+        
     }
     
     func markAsRead(isRead: Bool) {

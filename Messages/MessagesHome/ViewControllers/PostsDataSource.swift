@@ -11,6 +11,7 @@ import UIKit
 protocol PostsDataSourceDelegate: class {
     func getPosts(with postType: PostType) -> [Post]
     func postSelected(_ post: Post)
+    func deletePost(_ post: Post)
 }
 
 class PostsDataSource: NSObject {
@@ -48,6 +49,22 @@ extension PostsDataSource: UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) as? PostInformationCell {
             cell.markAsRead(isRead: post.isRead)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        guard let delegate = delegate, editingStyle == .delete else {
+            return
+        }
+        
+        let post = delegate.getPosts(with: postsType)[indexPath.row]
+        tableView.beginUpdates()
+        delegate.deletePost(post)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        tableView.endUpdates()
     }
 }
 
