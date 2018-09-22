@@ -33,6 +33,9 @@
                         <segment title="Second"/>
                     </segments>
                     <color key="tintColor" red="0.0" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="segmentControlSelected" destination="-1" eventType="valueChanged" id="Ytf-zp-A09"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

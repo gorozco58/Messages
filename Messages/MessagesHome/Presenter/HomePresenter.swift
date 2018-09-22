@@ -35,8 +35,9 @@ extension HomePresenter: HomePresenterType {
     func searchAllPosts() {
         interactor
             .searchAllPosts()
-            
-            .subscribe(onSuccess: { [unowned self] in
+            .delay(5, scheduler: MainScheduler.instance)
+            .startWith(interactor.createLoadingPosts())
+            .subscribe(onNext: {
                 self.interactor.updatePosts($0)
                 self.performActionSubject.onNext(.reloadData)
             })

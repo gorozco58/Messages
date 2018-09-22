@@ -64,6 +64,15 @@ private extension HomeViewController {
     
     @objc func reloadPosts() {
         optionsControl.selectedSegmentIndex = 0
+        dataSource.postsType = .normal
         presenter.reloadPosts()
+    }
+    
+    @IBAction func segmentControlSelected() {
+        guard let postType = PostType(rawValue: optionsControl.selectedSegmentIndex) else {
+            return
+        }
+        dataSource.postsType = postType
+        postsTableView.reloadData()
     }
 }

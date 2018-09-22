@@ -19,22 +19,23 @@ class HomeInteractor {
 //MARK: - HomeInteractorType
 extension HomeInteractor: HomeInteractorType {
     
-    func searchAllPosts() -> Single<[Post]> {
-        return Single.create { observer in
+    func searchAllPosts() -> Observable<[Post]> {
+        return Observable.create { observer in
             Alamofire.request(ServiceUrl.allPosts).responseJSON { response in
                 switch response.result {
                 case .success(let json as [[AnyHashable : Any]]):
                     do {
-                        let post: [Post] = try JSONDecoder.array(with: json)
-                        observer(.success(post))
+                        let posts: [Post] = try JSONDecoder.array(with: json)
+                        observer.onNext(posts)
+                        observer.onCompleted()
                     } catch {
                         print(error)
-                        observer(.error(error))
+                        observer.onError(error)
                     }
                 case .failure(let error):
-                    observer(.error(error))
+                    observer.onError(error)
                 default:
-                    observer(.error(RxError.unknown))
+                    observer.onError(RxError.unknown)
                 }
             }
             return Disposables.create()
@@ -47,5 +48,9 @@ extension HomeInteractor: HomeInteractorType {
     
     func getPosts(with type: PostType) -> [Post] {
         return allPosts.filter { $0.postType == type }
+    }
+    
+    func createLoadingPosts() -> [Post] {
+        return [Post(), Post(), Post(), Post(), Post(), Post(), Post(), Post()]
     }
 }

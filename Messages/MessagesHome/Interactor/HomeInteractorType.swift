@@ -10,7 +10,8 @@ import Foundation
 import RxSwift
 
 protocol HomeInteractorType {
-    func searchAllPosts() -> Single<[Post]>
+    func searchAllPosts() -> Observable<[Post]>
     func updatePosts(_ posts: [Post])
     func getPosts(with type: PostType) -> [Post]
+    func createLoadingPosts() -> [Post]
 }

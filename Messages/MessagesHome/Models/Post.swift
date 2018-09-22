@@ -16,7 +16,7 @@ protocol Mockable {
     var isMock: Bool { get }
 }
 
-enum PostType {
+enum PostType: Int {
     case normal
     case favorite
 }
