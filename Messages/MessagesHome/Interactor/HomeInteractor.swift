@@ -13,7 +13,6 @@ import Alamofire
 
 class HomeInteractor {
     private var allPosts: [Post] = []
-    
 }
 
 //MARK: - HomeInteractorType
@@ -53,5 +52,9 @@ extension HomeInteractor: HomeInteractorType {
     
     func createLoadingPosts() -> [Post] {
         return [Post(), Post(), Post(), Post(), Post(), Post(), Post(), Post()]
+    }
+    
+    func markPostAsRead(_ post: Post) {
+        post.isRead = true
     }
 }

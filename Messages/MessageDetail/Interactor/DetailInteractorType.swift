@@ -1,5 +1,5 @@
 //
-//  MessagePresenterType.swift
+//  DetailInteractorType.swift
 //  Messages
 //
 //  Created by Giovanny Orozco on 9/22/18.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol DetailInteractorType {
+    
+}

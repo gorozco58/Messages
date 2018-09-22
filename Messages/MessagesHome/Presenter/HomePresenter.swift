@@ -35,7 +35,7 @@ extension HomePresenter: HomePresenterType {
     func searchAllPosts() {
         interactor
             .searchAllPosts()
-            .delay(5, scheduler: MainScheduler.instance)
+            .delay(5, scheduler: MainScheduler.instance)//uncomment for test loading views
             .startWith(interactor.createLoadingPosts())
             .subscribe(onNext: {
                 self.interactor.updatePosts($0)
@@ -54,6 +54,10 @@ extension HomePresenter: PostsDataSourceDelegate {
     
     func getPosts(with postType: PostType) -> [Post] {
         return interactor.getPosts(with: postType)
+    }
+    
+    func postSelected(_ post: Post) {
+        interactor.markPostAsRead(post)
     }
 }
 

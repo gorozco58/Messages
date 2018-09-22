@@ -14,4 +14,5 @@ protocol HomeInteractorType {
     func updatePosts(_ posts: [Post])
     func getPosts(with type: PostType) -> [Post]
     func createLoadingPosts() -> [Post]
+    func markPostAsRead(_ post: Post)
 }

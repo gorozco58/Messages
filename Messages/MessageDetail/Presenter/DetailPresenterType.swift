@@ -1,5 +1,5 @@
 //
-//  MessageInteractorType.swift
+//  DetailPresenterType.swift
 //  Messages
 //
 //  Created by Giovanny Orozco on 9/22/18.
@@ -8,6 +8,11 @@
 
 import Foundation
 
-protocol MessageInteractorType {
+enum DetailPostAction {
     
+}
+
+protocol DetailPresenterType {
+    
+    func showPostDetailView()
 }

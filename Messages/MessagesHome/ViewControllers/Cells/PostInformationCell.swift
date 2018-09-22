@@ -14,15 +14,24 @@ class PostInformationCell: UITableViewCell {
     @IBOutlet private weak var readPointView: UIView!
     @IBOutlet private weak var loadersContainerView: UIView!
     @IBOutlet private var loaderViews: [GradientLoaderView]!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
 
     func updateView(with info: Mockable & TitleBodyType) {
         configureLoadingViews(loading: info.isMock)
         titleLabel.text = info.title
         descriptionLabel.text = info.body
-        readPointView.isHidden = info.isRead
+        markAsRead(isRead: info.isRead)
     }
     
-    open func configureLoadingViews(loading isLoading: Bool = true) {
+    func markAsRead(isRead: Bool) {
+        readPointView.isHidden = isRead
+    }
+    
+    private func configureLoadingViews(loading isLoading: Bool = true) {
         guard let loadingViews = loaderViews, !loadingViews.isEmpty else {
             return
         }

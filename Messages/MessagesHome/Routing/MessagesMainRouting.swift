@@ -31,6 +31,9 @@ extension MessagesMainRouting: RoutingType {
         case .showHome(let presenter):
             let homeViewController = HomeViewController(presenter: presenter)
             navigationController.setViewControllers([homeViewController], animated: false)
+        case .showPostDetail(let post):
+            let detailModule = MessageDetailModule(navigationController: navigationController, with: post)
+            detailModule.showDetailView()
         }
     }
 }

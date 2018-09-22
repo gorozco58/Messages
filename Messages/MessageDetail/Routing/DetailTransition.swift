@@ -1,5 +1,5 @@
 //
-//  MainTransition.swift
+//  DetailTransition.swift
 //  Messages
 //
 //  Created by Giovanny Orozco on 9/22/18.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-enum MainTransition {
-    case showHome(presenter: HomePresenterType)
-    case showPostDetail(post: Post)
+enum DetailTransition {
+    case showDetail(presenter: DetailPresenterType)
 }

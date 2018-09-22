@@ -44,6 +44,7 @@ private extension HomeViewController {
         dataSource.delegate = presenter
         postsTableView.registerNibForCell(with: PostInformationCell.self)
         postsTableView.dataSource = dataSource
+        postsTableView.delegate = dataSource
         postsTableView.rowHeight = UITableViewAutomaticDimension
         postsTableView.estimatedRowHeight = 44.0
     }

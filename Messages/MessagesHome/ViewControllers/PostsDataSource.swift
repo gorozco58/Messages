@@ -10,6 +10,7 @@ import UIKit
 
 protocol PostsDataSourceDelegate: class {
     func getPosts(with postType: PostType) -> [Post]
+    func postSelected(_ post: Post)
 }
 
 class PostsDataSource: NSObject {
@@ -30,6 +31,23 @@ extension PostsDataSource: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(with: PostInformationCell.self, forIndexPath: indexPath)
         cell.updateView(with: post)
         return cell
+    }
+}
+
+//MARK: - UITableViewDelegate
+extension PostsDataSource: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let delegate = delegate else {
+            return
+        }
+        
+        let post = delegate.getPosts(with: postsType)[indexPath.row]
+        delegate.postSelected(post)
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? PostInformationCell {
+            cell.markAsRead(isRead: post.isRead)
+        }
     }
 }
 
