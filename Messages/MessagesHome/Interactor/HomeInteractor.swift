@@ -26,6 +26,7 @@ extension HomeInteractor: HomeInteractorType {
                 case .success(let json as [[AnyHashable : Any]]):
                     do {
                         let posts: [Post] = try JSONDecoder.array(with: json)
+                        posts.markAsRead(from: 20)
                         observer.onNext(posts)
                         observer.onCompleted()
                     } catch {

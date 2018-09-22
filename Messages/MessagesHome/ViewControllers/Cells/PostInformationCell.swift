@@ -11,6 +11,7 @@ import UIKit
 class PostInformationCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var readPointView: UIView!
     @IBOutlet private weak var loadersContainerView: UIView!
     @IBOutlet private var loaderViews: [GradientLoaderView]!
 
@@ -18,6 +19,7 @@ class PostInformationCell: UITableViewCell {
         configureLoadingViews(loading: info.isMock)
         titleLabel.text = info.title
         descriptionLabel.text = info.body
+        readPointView.isHidden = info.isRead
     }
     
     open func configureLoadingViews(loading isLoading: Bool = true) {

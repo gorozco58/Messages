@@ -11,6 +11,7 @@ import Foundation
 protocol TitleBodyType {
     var title: String { get }
     var body: String { get }
+    var isRead: Bool { get }
 }
 protocol Mockable {
     var isMock: Bool { get }
@@ -27,6 +28,7 @@ class Post: Codable, Mockable, TitleBodyType {
     let title: String
     let body: String
     var postType: PostType = .normal
+    var isRead = false
     
     var isMock: Bool {
         return postId == 0 || userId == 0
@@ -44,5 +46,16 @@ class Post: Codable, Mockable, TitleBodyType {
         case userId
         case title
         case body
+    }
+}
+
+extension Collection where Iterator.Element == Post {
+    
+    func markAsRead(from startingIndex: Int) {
+        enumerated().forEach { (index, element) in
+            if startingIndex <= index {
+                element.isRead = true
+            }
+        }
     }
 }
