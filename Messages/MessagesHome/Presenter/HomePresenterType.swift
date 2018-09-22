@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol HomePresenterType {
     
     func showHomeView()
+    func searchAllPosts() -> Completable
 }

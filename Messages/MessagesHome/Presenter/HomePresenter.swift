@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class HomePresenter<Routing: RoutingType> where Routing.Transition == MainTransition {
     private let interactor: HomeInteractorType
@@ -23,6 +24,12 @@ extension HomePresenter: HomePresenterType {
     
     func showHomeView() {
         handleTransition(transition: .showHome(presenter: self))
+    }
+    
+    func searchAllPosts() -> Completable {
+        return interactor
+            .searchAllPosts()
+            .asCompletable()
     }
 }
 

@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol HomeInteractorType {
-    
+    func searchAllPosts() -> Single<[Post]>
 }

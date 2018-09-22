@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController {
-    let presenter: HomePresenterType
+    private let presenter: HomePresenterType
+    private let disposeBag = DisposeBag()
     
     init(presenter: HomePresenterType) {
         self.presenter = presenter
@@ -22,7 +24,24 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        presenter
+            .searchAllPosts()
+            .subscribe(onCompleted: {
+                print("Done")
+            })
+            .disposed(by: disposeBag)
+    }
+}
 
-        // Do any additional setup after loading the view.
+//MARK: - Private methods
+private extension HomeViewController {
+    
+    func setupView() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "reload-icon"), style: .plain, target: self, action: #selector(reloadPosts))
+    }
+    
+    @objc func reloadPosts() {
+        
     }
 }

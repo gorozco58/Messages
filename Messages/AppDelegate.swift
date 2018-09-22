@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        
+        applyAppearance()
         let navigationController = UINavigationController(nibName: nil, bundle: nil)
         let homeModule = MessagesHomeModule(navigationController: navigationController)
         self.window?.rootViewController = navigationController
@@ -46,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    private func applyAppearance() {        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 255/255, blue: 55/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+    }
 }
 
