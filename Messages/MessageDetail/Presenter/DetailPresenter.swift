@@ -24,8 +24,16 @@ class DetailPresenter <Routing: RoutingType> where Routing.Transition == DetailT
 //MARK: - DetailPresenterType
 extension DetailPresenter: DetailPresenterType {
     
+    var isFavorite: Bool {
+        return interactor.post.postType == .favorite
+    }
+    
     func showPostDetailView() {
         handleTransition(transition: .showDetail(presenter: self))
+    }
+    
+    func updatePostStatus() {
+        interactor.updatePostStatus()
     }
 }
 

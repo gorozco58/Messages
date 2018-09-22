@@ -23,6 +23,22 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupView()
+    }
+}
+
+//MARK: - Private methods
+private extension DetailViewController {
+    
+    func setupView() {
+        navigationItem.title = LocalizedString.post.localize()
+        let image: UIImage = presenter.isFavorite ? #imageLiteral(resourceName: "check-star-icon") : #imageLiteral(resourceName: "uncheck-star-icon")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(updateFavoriteStatus))
+    }
+    
+    @objc func updateFavoriteStatus() {
+        presenter.updatePostStatus()
+        let image: UIImage = presenter.isFavorite ? #imageLiteral(resourceName: "check-star-icon") : #imageLiteral(resourceName: "uncheck-star-icon")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(updateFavoriteStatus))
     }
 }

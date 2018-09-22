@@ -10,4 +10,7 @@ import Foundation
 
 protocol DetailInteractorType {
     
+    var post: Post { get }
+    
+    func updatePostStatus()
 }

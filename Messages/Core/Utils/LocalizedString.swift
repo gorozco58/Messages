@@ -12,6 +12,7 @@ enum LocalizedString: String {
     case allPosts
     case all
     case favorites
+    case post
     
     private static let errorCopy: String = "**ERROR*COPY**"
     

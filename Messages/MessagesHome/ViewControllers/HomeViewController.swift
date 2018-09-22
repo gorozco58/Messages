@@ -31,6 +31,11 @@ class HomeViewController: UIViewController {
         setupView()
         setupPresenter()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        postsTableView.reloadData()
+    }
 }
 
 //MARK: - Private methods

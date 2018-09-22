@@ -13,6 +13,8 @@ enum DetailPostAction {
 }
 
 protocol DetailPresenterType {
+    var isFavorite: Bool { get }
     
     func showPostDetailView()
+    func updatePostStatus()
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class DetailInteractor {
  
-    private let post: Post
+    let post: Post
     
     init(post: Post) {
         self.post = post
@@ -20,4 +20,7 @@ class DetailInteractor {
 //MARK: - DetailInteractorType
 extension DetailInteractor: DetailInteractorType {
     
+    func updatePostStatus() {
+        post.postType = post.postType == .normal ? .favorite : .normal
+    }
 }

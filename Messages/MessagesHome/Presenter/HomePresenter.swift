@@ -58,6 +58,7 @@ extension HomePresenter: PostsDataSourceDelegate {
     
     func postSelected(_ post: Post) {
         interactor.markPostAsRead(post)
+        handleTransition(transition: .showPostDetail(post: post))
     }
 }
 
