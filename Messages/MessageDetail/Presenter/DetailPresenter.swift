@@ -13,7 +13,7 @@ class DetailPresenter <Routing: RoutingType> where Routing.Transition == DetailT
     private let interactor: DetailInteractorType
     private let routing: Routing
     private let disposeBag = DisposeBag()
-    private let performActionSubject = PublishSubject<HomePostsAction>()
+    private let performActionSubject = PublishSubject<DetailPostAction>()
     
     init(interactor: DetailInteractorType, routing: Routing) {
         self.interactor = interactor
@@ -24,8 +24,12 @@ class DetailPresenter <Routing: RoutingType> where Routing.Transition == DetailT
 //MARK: - DetailPresenterType
 extension DetailPresenter: DetailPresenterType {
     
+    var onPerformAction: Observable<DetailPostAction> {
+        return performActionSubject.asObservable()
+    }
+    
     var isFavorite: Bool {
-        return interactor.post.postType == .favorite
+        return interactor.postDetail.post.postType == .favorite
     }
     
     func showPostDetailView() {
@@ -34,6 +38,32 @@ extension DetailPresenter: DetailPresenterType {
     
     func updatePostStatus() {
         interactor.updatePostStatus()
+    }
+    
+    func loadPostDetails() {
+        interactor
+            .searchPostUserOwner()
+            .subscribe(onNext: { [unowned self] in
+                self.interactor.updateUser($0)
+                self.performActionSubject.onNext(.reloadData)
+            })
+            .disposed(by: disposeBag)
+        
+        interactor
+            .searchPostComments()
+            .subscribe(onNext: { [unowned self] in
+                self.interactor.updateComments($0)
+                self.performActionSubject.onNext(.reloadData)
+            })
+            .disposed(by: disposeBag)
+    }
+}
+
+//MARK: - PostDataSourceDelegate
+extension DetailPresenter: PostDataSourceDelegate {
+    
+    var postDetails: PostDetail {
+        return interactor.postDetail
     }
 }
 

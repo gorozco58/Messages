@@ -43,6 +43,10 @@
 		88635D962156CC7A00CD2791 /* DetailTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D952156CC7A00CD2791 /* DetailTransition.swift */; };
 		88635D992156CE4300CD2791 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D972156CE4300CD2791 /* DetailViewController.swift */; };
 		88635D9A2156CE4300CD2791 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635D982156CE4300CD2791 /* DetailViewController.xib */; };
+		88635D9C2156EEB800CD2791 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D9B2156EEB800CD2791 /* PostDataSource.swift */; };
+		88635D9E2156EF6F00CD2791 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D9D2156EF6F00CD2791 /* PostDetail.swift */; };
+		88635DA02156EF9000CD2791 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D9F2156EF9000CD2791 /* User.swift */; };
+		88635DA22156F08B00CD2791 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DA12156F08B00CD2791 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,10 @@
 		88635D952156CC7A00CD2791 /* DetailTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransition.swift; sourceTree = "<group>"; };
 		88635D972156CE4300CD2791 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		88635D982156CE4300CD2791 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		88635D9B2156EEB800CD2791 /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
+		88635D9D2156EF6F00CD2791 /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
+		88635D9F2156EF9000CD2791 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		88635DA12156F08B00CD2791 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		EE098D4C302A8F5A183162E3 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -340,6 +348,9 @@
 		88635D882156CB5800CD2791 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				88635D9D2156EF6F00CD2791 /* PostDetail.swift */,
+				88635D9F2156EF9000CD2791 /* User.swift */,
+				88635DA12156F08B00CD2791 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,6 +360,7 @@
 			children = (
 				88635D972156CE4300CD2791 /* DetailViewController.swift */,
 				88635D982156CE4300CD2791 /* DetailViewController.xib */,
+				88635D9B2156EEB800CD2791 /* PostDataSource.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -559,6 +571,7 @@
 				88635D822156AA1300CD2791 /* UITableViewExtension.swift in Sources */,
 				88635D7B2156A55C00CD2791 /* ServiceUrl.swift in Sources */,
 				88635D802156A5AE00CD2791 /* UIColorExtension.swift in Sources */,
+				88635DA02156EF9000CD2791 /* User.swift in Sources */,
 				88635D992156CE4300CD2791 /* DetailViewController.swift in Sources */,
 				88635D702156A00E00CD2791 /* PostInformationCell.swift in Sources */,
 				88635D7D2156A55C00CD2791 /* RoutingType.swift in Sources */,
@@ -567,12 +580,15 @@
 				88635D4F21567CC700CD2791 /* HomePresenterType.swift in Sources */,
 				88635D5521567CF400CD2791 /* MessagesMainRouting.swift in Sources */,
 				88635D8E2156CBC300CD2791 /* DetailInteractor.swift in Sources */,
+				88635D9C2156EEB800CD2791 /* PostDataSource.swift in Sources */,
 				88635D942156CC6700CD2791 /* MessageDetailRouting.swift in Sources */,
 				88635D5221567CC700CD2791 /* HomeViewController.swift in Sources */,
+				88635D9E2156EF6F00CD2791 /* PostDetail.swift in Sources */,
 				88635D5321567CC700CD2791 /* HomeInteractorType.swift in Sources */,
 				88635D962156CC7A00CD2791 /* DetailTransition.swift in Sources */,
 				88635D5721567D5500CD2791 /* MainTransition.swift in Sources */,
 				88635D772156A52600CD2791 /* OptionalType.swift in Sources */,
+				88635DA22156F08B00CD2791 /* Comment.swift in Sources */,
 				88635D8C2156CBB000CD2791 /* DetailInteractorType.swift in Sources */,
 				88635D852156CB4800CD2791 /* MessageDetailModule.swift in Sources */,
 				88635D922156CC2500CD2791 /* DetailPresenter.swift in Sources */,

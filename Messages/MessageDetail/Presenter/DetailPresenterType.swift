@@ -7,14 +7,18 @@
 //
 
 import Foundation
+import RxSwift
 
 enum DetailPostAction {
-    
+    case reloadData
 }
 
-protocol DetailPresenterType {
+protocol DetailPresenterType: PostDataSourceDelegate {
+    
     var isFavorite: Bool { get }
+    var onPerformAction: Observable<DetailPostAction> { get }
     
     func showPostDetailView()
     func updatePostStatus()
+    func loadPostDetails()
 }

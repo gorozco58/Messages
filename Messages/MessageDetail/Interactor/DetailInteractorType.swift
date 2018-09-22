@@ -7,10 +7,15 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol DetailInteractorType {
     
-    var post: Post { get }
+    var postDetail: PostDetail { get }
     
     func updatePostStatus()
+    func searchPostUserOwner() -> Observable<User>
+    func searchPostComments() -> Observable<[Comment]>
+    func updateUser(_ user: User)
+    func updateComments(_ comments: [Comment])
 }

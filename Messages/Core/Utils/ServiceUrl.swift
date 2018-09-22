@@ -9,20 +9,33 @@
 import Foundation
 import Alamofire
 
-enum ServiceUrl: String, URLConvertible {
+enum ServiceUrl: URLConvertible {
     
-    case allPosts = "https://jsonplaceholder.typicode.com/posts"
+    case allPosts
+    case user(id: Int)
+    case comments(postId: Int)
     
-    enum UrlError: Error {
-        case transforming
+    func urlString() -> String {
+        switch self {
+        case .allPosts:
+            return "https://jsonplaceholder.typicode.com/posts"
+        case .user(let id):
+            return "https://jsonplaceholder.typicode.com/users/\(id)"
+        case .comments(let postId):
+            return "https://jsonplaceholder.typicode.com/posts/\(postId)/comments"
+        }
     }
     
     func asURL() throws -> URL {
-        if let url = URL(string: rawValue) {
+        if let url = URL(string: urlString()) {
             return url
         }
         throw UrlError.transforming
     }
+}
+
+enum UrlError: Error {
+    case transforming
 }
 
 public extension JSONDecoder {

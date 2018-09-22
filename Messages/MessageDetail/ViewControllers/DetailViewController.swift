@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class DetailViewController: UIViewController {
+    @IBOutlet private weak var postTableView: UITableView!
     
     private let presenter: DetailPresenterType
+    private let disposeBag = DisposeBag()
     
     init(presenter: DetailPresenterType) {
         self.presenter = presenter
@@ -40,5 +43,19 @@ private extension DetailViewController {
         presenter.updatePostStatus()
         let image: UIImage = presenter.isFavorite ? #imageLiteral(resourceName: "check-star-icon") : #imageLiteral(resourceName: "uncheck-star-icon")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(updateFavoriteStatus))
+    }
+    
+    func setupPresenter() {
+        presenter.loadPostDetails()
+        
+        presenter
+            .onPerformAction
+            .subscribe(onNext: { [unowned self] in
+                switch $0 {
+                case .reloadData:
+                    self.postTableView.reloadData()
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
