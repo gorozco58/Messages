@@ -10,6 +10,9 @@ import UIKit
 import RxSwift
 
 class HomeViewController: UIViewController {
+    @IBOutlet private weak var postsTableView: UITableView!
+    @IBOutlet private weak var optionsControl: UISegmentedControl!
+    
     private let presenter: HomePresenterType
     private let disposeBag = DisposeBag()
     
@@ -38,7 +41,10 @@ class HomeViewController: UIViewController {
 private extension HomeViewController {
     
     func setupView() {
+        navigationItem.title = LocalizedString.allPosts.localize()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "reload-icon"), style: .plain, target: self, action: #selector(reloadPosts))
+        optionsControl.setTitle(LocalizedString.all.localize(), forSegmentAt: 0)
+        optionsControl.setTitle(LocalizedString.favorites.localize(), forSegmentAt: 1)
     }
     
     @objc func reloadPosts() {
