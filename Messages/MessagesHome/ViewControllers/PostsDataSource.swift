@@ -8,14 +8,19 @@
 
 import UIKit
 
+protocol PostsDataSourceDelegate: class {
+    func getPosts(with postType: PostType) -> [Post]
+}
+
 class PostsDataSource: NSObject {
-    
+    var postsType: PostType = .normal
+    weak var delegate: PostsDataSourceDelegate?
 }
 
 //MARK: - UITableViewDataSource
 extension PostsDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return delegate?.getPosts(with: postsType).count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

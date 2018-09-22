@@ -11,4 +11,6 @@ import RxSwift
 
 protocol HomeInteractorType {
     func searchAllPosts() -> Single<[Post]>
+    func updatePosts(_ posts: [Post])
+    func getPosts(with type: PostType) -> [Post]
 }

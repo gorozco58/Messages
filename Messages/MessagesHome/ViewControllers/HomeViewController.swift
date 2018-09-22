@@ -28,12 +28,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter
-            .searchAllPosts()
-            .subscribe(onCompleted: {
-                print("Done")
-            })
-            .disposed(by: disposeBag)
+        presenter.searchAllPosts()
     }
 }
 
@@ -48,6 +43,7 @@ private extension HomeViewController {
     }
     
     @objc func reloadPosts() {
-        
+        optionsControl.selectedSegmentIndex = 0
+        presenter.reloadPosts()
     }
 }

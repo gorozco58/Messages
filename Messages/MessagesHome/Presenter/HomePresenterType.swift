@@ -12,5 +12,6 @@ import RxSwift
 protocol HomePresenterType {
     
     func showHomeView()
-    func searchAllPosts() -> Completable
+    func searchAllPosts()
+    func reloadPosts()
 }

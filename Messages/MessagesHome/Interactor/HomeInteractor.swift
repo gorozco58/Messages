@@ -12,7 +12,8 @@ import Alamofire
 
 
 class HomeInteractor {
-        
+    private var allPosts: [Post] = []
+    
 }
 
 //MARK: - HomeInteractorType
@@ -38,5 +39,13 @@ extension HomeInteractor: HomeInteractorType {
             }
             return Disposables.create()
         }
+    }
+    
+    func updatePosts(_ posts: [Post]) {
+        allPosts = posts
+    }
+    
+    func getPosts(with type: PostType) -> [Post] {
+        return allPosts.filter { $0.postType == type }
     }
 }

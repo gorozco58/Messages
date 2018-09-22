@@ -24,12 +24,17 @@
 		88635D5721567D5500CD2791 /* MainTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D5621567D5500CD2791 /* MainTransition.swift */; };
 		88635D5921567D6E00CD2791 /* MessagesHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D5821567D6E00CD2791 /* MessagesHomeModule.swift */; };
 		88635D5B21567DD900CD2791 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D5A21567DD900CD2791 /* HomeInteractor.swift */; };
-		88635D5D21567F6800CD2791 /* RoutingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D5C21567F6800CD2791 /* RoutingType.swift */; };
 		88635D5F2156855800CD2791 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D5E2156855800CD2791 /* Post.swift */; };
-		88635D61215687EB00CD2791 /* ServiceUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D60215687EB00CD2791 /* ServiceUrl.swift */; };
 		88635D652156951800CD2791 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88635D672156951800CD2791 /* Localizable.strings */; };
-		88635D6A2156954D00CD2791 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D692156954D00CD2791 /* LocalizedString.swift */; };
 		88635D6C2156987700CD2791 /* PostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D6B2156987700CD2791 /* PostsDataSource.swift */; };
+		88635D702156A00E00CD2791 /* PostInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D6E2156A00E00CD2791 /* PostInformationCell.swift */; };
+		88635D712156A00E00CD2791 /* PostInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635D6F2156A00E00CD2791 /* PostInformationCell.xib */; };
+		88635D742156A4B100CD2791 /* GradientLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D732156A4B100CD2791 /* GradientLoaderView.swift */; };
+		88635D772156A52600CD2791 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D762156A52600CD2791 /* OptionalType.swift */; };
+		88635D7B2156A55C00CD2791 /* ServiceUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D782156A55B00CD2791 /* ServiceUrl.swift */; };
+		88635D7C2156A55C00CD2791 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D792156A55B00CD2791 /* LocalizedString.swift */; };
+		88635D7D2156A55C00CD2791 /* RoutingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D7A2156A55B00CD2791 /* RoutingType.swift */; };
+		88635D802156A5AE00CD2791 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D7F2156A5AE00CD2791 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,14 +79,19 @@
 		88635D5621567D5500CD2791 /* MainTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTransition.swift; sourceTree = "<group>"; };
 		88635D5821567D6E00CD2791 /* MessagesHomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesHomeModule.swift; sourceTree = "<group>"; };
 		88635D5A21567DD900CD2791 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
-		88635D5C21567F6800CD2791 /* RoutingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingType.swift; sourceTree = "<group>"; };
 		88635D5E2156855800CD2791 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		88635D60215687EB00CD2791 /* ServiceUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUrl.swift; sourceTree = "<group>"; };
 		88635D622156949100CD2791 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		88635D662156951800CD2791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88635D682156951C00CD2791 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		88635D692156954D00CD2791 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		88635D6B2156987700CD2791 /* PostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDataSource.swift; sourceTree = "<group>"; };
+		88635D6E2156A00E00CD2791 /* PostInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInformationCell.swift; sourceTree = "<group>"; };
+		88635D6F2156A00E00CD2791 /* PostInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostInformationCell.xib; sourceTree = "<group>"; };
+		88635D732156A4B100CD2791 /* GradientLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLoaderView.swift; sourceTree = "<group>"; };
+		88635D762156A52600CD2791 /* OptionalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalType.swift; sourceTree = "<group>"; };
+		88635D782156A55B00CD2791 /* ServiceUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceUrl.swift; sourceTree = "<group>"; };
+		88635D792156A55B00CD2791 /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		88635D7A2156A55B00CD2791 /* RoutingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingType.swift; sourceTree = "<group>"; };
+		88635D7F2156A5AE00CD2791 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		EE098D4C302A8F5A183162E3 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,11 +186,11 @@
 		88635D262156764400CD2791 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				88635D7E2156A5A300CD2791 /* Extensions */,
+				88635D752156A51400CD2791 /* Utils */,
+				88635D722156A4A000CD2791 /* Views */,
 				88635D2F2156775F00CD2791 /* MessagePresenterType.swift */,
 				88635D3921567AF300CD2791 /* MessageInteractorType.swift */,
-				88635D5C21567F6800CD2791 /* RoutingType.swift */,
-				88635D60215687EB00CD2791 /* ServiceUrl.swift */,
-				88635D692156954D00CD2791 /* LocalizedString.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 		88635D4621567CC700CD2791 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				88635D6D21569FE300CD2791 /* Cells */,
 				88635D4721567CC700CD2791 /* HomeViewController.xib */,
 				88635D4821567CC700CD2791 /* HomeViewController.swift */,
 				88635D6B2156987700CD2791 /* PostsDataSource.swift */,
@@ -241,6 +252,42 @@
 				88635D5A21567DD900CD2791 /* HomeInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		88635D6D21569FE300CD2791 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88635D6E2156A00E00CD2791 /* PostInformationCell.swift */,
+				88635D6F2156A00E00CD2791 /* PostInformationCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		88635D722156A4A000CD2791 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88635D732156A4B100CD2791 /* GradientLoaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88635D752156A51400CD2791 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				88635D792156A55B00CD2791 /* LocalizedString.swift */,
+				88635D7A2156A55B00CD2791 /* RoutingType.swift */,
+				88635D782156A55B00CD2791 /* ServiceUrl.swift */,
+				88635D762156A52600CD2791 /* OptionalType.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		88635D7E2156A5A300CD2791 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88635D7F2156A5AE00CD2791 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A4959A17C373858DF6C54F37 /* Pods */ = {
@@ -363,6 +410,7 @@
 				88635D652156951800CD2791 /* Localizable.strings in Resources */,
 				88635CFA21566D2000CD2791 /* Assets.xcassets in Resources */,
 				88635D5121567CC700CD2791 /* HomeViewController.xib in Resources */,
+				88635D712156A00E00CD2791 /* PostInformationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,20 +479,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				88635D5921567D6E00CD2791 /* MessagesHomeModule.swift in Sources */,
-				88635D61215687EB00CD2791 /* ServiceUrl.swift in Sources */,
 				88635D5B21567DD900CD2791 /* HomeInteractor.swift in Sources */,
+				88635D742156A4B100CD2791 /* GradientLoaderView.swift in Sources */,
 				88635D302156775F00CD2791 /* MessagePresenterType.swift in Sources */,
 				88635D6C2156987700CD2791 /* PostsDataSource.swift in Sources */,
 				88635CF321566D1F00CD2791 /* AppDelegate.swift in Sources */,
-				88635D6A2156954D00CD2791 /* LocalizedString.swift in Sources */,
+				88635D7B2156A55C00CD2791 /* ServiceUrl.swift in Sources */,
+				88635D802156A5AE00CD2791 /* UIColorExtension.swift in Sources */,
+				88635D702156A00E00CD2791 /* PostInformationCell.swift in Sources */,
+				88635D7D2156A55C00CD2791 /* RoutingType.swift in Sources */,
+				88635D7C2156A55C00CD2791 /* LocalizedString.swift in Sources */,
 				88635D5F2156855800CD2791 /* Post.swift in Sources */,
 				88635D4F21567CC700CD2791 /* HomePresenterType.swift in Sources */,
 				88635D5521567CF400CD2791 /* MessagesMainRouting.swift in Sources */,
-				88635D5D21567F6800CD2791 /* RoutingType.swift in Sources */,
 				88635D5221567CC700CD2791 /* HomeViewController.swift in Sources */,
 				88635D5321567CC700CD2791 /* HomeInteractorType.swift in Sources */,
 				88635D5721567D5500CD2791 /* MainTransition.swift in Sources */,
 				88635D3A21567AF300CD2791 /* MessageInteractorType.swift in Sources */,
+				88635D772156A52600CD2791 /* OptionalType.swift in Sources */,
 				88635D5021567CC700CD2791 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

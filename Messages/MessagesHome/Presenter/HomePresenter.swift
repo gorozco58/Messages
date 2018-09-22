@@ -12,6 +12,7 @@ import RxSwift
 class HomePresenter<Routing: RoutingType> where Routing.Transition == MainTransition {
     private let interactor: HomeInteractorType
     private let routing: Routing
+    private let disposeBag = DisposeBag()
     
     init(interactor: HomeInteractorType, routing: Routing) {
         self.interactor = interactor
@@ -26,10 +27,17 @@ extension HomePresenter: HomePresenterType {
         handleTransition(transition: .showHome(presenter: self))
     }
     
-    func searchAllPosts() -> Completable {
-        return interactor
+    func searchAllPosts() {
+        interactor
             .searchAllPosts()
-            .asCompletable()
+            .subscribe(onSuccess: { [unowned self] in
+                self.interactor.updatePosts($0)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func reloadPosts() {
+        searchAllPosts()
     }
 }
 
