@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="162" id="KGk-i7-Jjw" customClass="UserInformationCell" customModule="Messages" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="161.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lG-sg-O3S">
+                        <rect key="frame" x="15" y="15" width="290" height="21"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IME-fw-qNc" customClass="GradientLoaderView" customModule="Messages" customModuleProvider="target">
+                        <rect key="frame" x="15" y="15" width="290" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="wnI-yc-iIT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1N-y4-1Ee">
+                        <rect key="frame" x="15" y="46" width="290" height="20.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huF-FJ-pr7" customClass="GradientLoaderView" customModule="Messages" customModuleProvider="target">
+                        <rect key="frame" x="15" y="46" width="290" height="20.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="HXo-xJ-GJU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-19-Qaq">
+                        <rect key="frame" x="15" y="71.5" width="290" height="20.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxf-Rx-NQQ" customClass="GradientLoaderView" customModule="Messages" customModuleProvider="target">
+                        <rect key="frame" x="15" y="71.5" width="290" height="20.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="lE0-3i-LM7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLV-Z1-ZEV">
+                        <rect key="frame" x="15" y="97" width="290" height="21"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEm-Ur-dOU" customClass="GradientLoaderView" customModule="Messages" customModuleProvider="target">
+                        <rect key="frame" x="15" y="97" width="290" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="tPJ-yM-LM6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-Qs-ZzE">
+                        <rect key="frame" x="15" y="123" width="290" height="21"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-HC-ObI" customClass="GradientLoaderView" customModule="Messages" customModuleProvider="target">
+                        <rect key="frame" x="15" y="123" width="290" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="hez-N1-R72"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="A1N-y4-1Ee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0ED-Ex-LMp"/>
+                    <constraint firstItem="A1N-y4-1Ee" firstAttribute="top" secondItem="7lG-sg-O3S" secondAttribute="bottom" constant="10" id="0QR-EO-Ff1"/>
+                    <constraint firstItem="wxf-Rx-NQQ" firstAttribute="leading" secondItem="2bn-19-Qaq" secondAttribute="leading" id="0vv-mm-SAY"/>
+                    <constraint firstItem="huF-FJ-pr7" firstAttribute="trailing" secondItem="A1N-y4-1Ee" secondAttribute="trailing" id="2Ub-sA-53k"/>
+                    <constraint firstItem="2bn-19-Qaq" firstAttribute="top" secondItem="A1N-y4-1Ee" secondAttribute="bottom" constant="5" id="3yy-Hz-Z2k"/>
+                    <constraint firstItem="TLV-Z1-ZEV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="5Yi-Er-zSp"/>
+                    <constraint firstItem="kEm-Ur-dOU" firstAttribute="trailing" secondItem="TLV-Z1-ZEV" secondAttribute="trailing" id="5f2-ra-1vA"/>
+                    <constraint firstItem="V5v-HC-ObI" firstAttribute="top" secondItem="fdC-Qs-ZzE" secondAttribute="top" id="CUp-8C-Bov"/>
+                    <constraint firstItem="V5v-HC-ObI" firstAttribute="leading" secondItem="fdC-Qs-ZzE" secondAttribute="leading" id="GDO-1C-sR8"/>
+                    <constraint firstItem="wxf-Rx-NQQ" firstAttribute="top" secondItem="2bn-19-Qaq" secondAttribute="top" id="GbD-lE-s8U"/>
+                    <constraint firstItem="huF-FJ-pr7" firstAttribute="bottom" secondItem="A1N-y4-1Ee" secondAttribute="bottom" id="GyD-8E-83O"/>
+                    <constraint firstItem="IME-fw-qNc" firstAttribute="bottom" secondItem="7lG-sg-O3S" secondAttribute="bottom" id="HL1-Mx-9Ya"/>
+                    <constraint firstAttribute="trailing" secondItem="7lG-sg-O3S" secondAttribute="trailing" constant="15" id="Ho0-3y-eBs"/>
+                    <constraint firstAttribute="trailing" secondItem="2bn-19-Qaq" secondAttribute="trailing" constant="15" id="Jhn-Up-ezs"/>
+                    <constraint firstItem="7lG-sg-O3S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JvP-6T-kXP"/>
+                    <constraint firstItem="kEm-Ur-dOU" firstAttribute="leading" secondItem="TLV-Z1-ZEV" secondAttribute="leading" id="KQs-A3-PwR"/>
+                    <constraint firstItem="TLV-Z1-ZEV" firstAttribute="top" secondItem="2bn-19-Qaq" secondAttribute="bottom" constant="5" id="LzH-KF-esf"/>
+                    <constraint firstItem="kEm-Ur-dOU" firstAttribute="top" secondItem="TLV-Z1-ZEV" secondAttribute="top" id="NES-Bd-k4E"/>
+                    <constraint firstAttribute="trailing" secondItem="TLV-Z1-ZEV" secondAttribute="trailing" constant="15" id="Ov3-SG-bEl"/>
+                    <constraint firstItem="wxf-Rx-NQQ" firstAttribute="bottom" secondItem="2bn-19-Qaq" secondAttribute="bottom" id="Q6k-g1-HBl"/>
+                    <constraint firstItem="IME-fw-qNc" firstAttribute="trailing" secondItem="7lG-sg-O3S" secondAttribute="trailing" id="TIT-CV-MgK"/>
+                    <constraint firstItem="wxf-Rx-NQQ" firstAttribute="trailing" secondItem="2bn-19-Qaq" secondAttribute="trailing" id="V8g-J7-APk"/>
+                    <constraint firstItem="2bn-19-Qaq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="WVv-2s-UG3"/>
+                    <constraint firstAttribute="trailing" secondItem="fdC-Qs-ZzE" secondAttribute="trailing" constant="15" id="aRV-xG-0DK"/>
+                    <constraint firstItem="7lG-sg-O3S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="b1c-aY-t34"/>
+                    <constraint firstItem="huF-FJ-pr7" firstAttribute="top" secondItem="A1N-y4-1Ee" secondAttribute="top" id="dJl-UU-5iK"/>
+                    <constraint firstItem="fdC-Qs-ZzE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ery-qQ-yBc"/>
+                    <constraint firstItem="V5v-HC-ObI" firstAttribute="trailing" secondItem="fdC-Qs-ZzE" secondAttribute="trailing" id="gRD-mU-eWo"/>
+                    <constraint firstItem="fdC-Qs-ZzE" firstAttribute="top" secondItem="TLV-Z1-ZEV" secondAttribute="bottom" constant="5" id="k0z-Um-9LH"/>
+                    <constraint firstItem="kEm-Ur-dOU" firstAttribute="bottom" secondItem="TLV-Z1-ZEV" secondAttribute="bottom" id="kGI-IT-ZFj"/>
+                    <constraint firstAttribute="trailing" secondItem="A1N-y4-1Ee" secondAttribute="trailing" constant="15" id="kvL-jr-JPM"/>
+                    <constraint firstItem="IME-fw-qNc" firstAttribute="leading" secondItem="7lG-sg-O3S" secondAttribute="leading" id="ngD-U5-LMD"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fdC-Qs-ZzE" secondAttribute="bottom" constant="10" id="t33-rC-4s7"/>
+                    <constraint firstItem="IME-fw-qNc" firstAttribute="top" secondItem="7lG-sg-O3S" secondAttribute="top" id="tns-aL-IxI"/>
+                    <constraint firstItem="huF-FJ-pr7" firstAttribute="leading" secondItem="A1N-y4-1Ee" secondAttribute="leading" id="zEq-2R-5Qg"/>
+                    <constraint firstItem="V5v-HC-ObI" firstAttribute="bottom" secondItem="fdC-Qs-ZzE" secondAttribute="bottom" id="zgi-44-40J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="emailLabel" destination="2bn-19-Qaq" id="4yf-4o-2Mr"/>
+                <outlet property="nameLabel" destination="A1N-y4-1Ee" id="U5i-Ya-GBJ"/>
+                <outlet property="phoneLabel" destination="TLV-Z1-ZEV" id="8gj-0M-JE4"/>
+                <outlet property="titleLabel" destination="7lG-sg-O3S" id="aYF-g8-zrn"/>
+                <outlet property="websiteLabel" destination="fdC-Qs-ZzE" id="djW-gm-LHS"/>
+                <outletCollection property="loaderViews" destination="IME-fw-qNc" collectionClass="NSMutableArray" id="SvN-GJ-c8s"/>
+                <outletCollection property="loaderViews" destination="huF-FJ-pr7" collectionClass="NSMutableArray" id="sOx-Ei-pSo"/>
+                <outletCollection property="loaderViews" destination="wxf-Rx-NQQ" collectionClass="NSMutableArray" id="CA3-65-as9"/>
+                <outletCollection property="loaderViews" destination="kEm-Ur-dOU" collectionClass="NSMutableArray" id="lzn-2o-hez"/>
+                <outletCollection property="loaderViews" destination="V5v-HC-ObI" collectionClass="NSMutableArray" id="cmi-ab-F0d"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="113"/>
+        </tableViewCell>
+    </objects>
+</document>

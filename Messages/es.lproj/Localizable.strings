@@ -14,3 +14,5 @@
 "alert" = "Alerta";
 "deleteMessage" = "Desea eliminar todas las publicaciones?";
 "cancel" = "Cancelar";
+"description" = "Descripción";
+"user" = "Usuario";

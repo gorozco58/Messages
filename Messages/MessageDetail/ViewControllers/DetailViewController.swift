@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var postTableView: UITableView!
     
     private let presenter: DetailPresenterType
+    private let dataSource = PostDataSource()
     private let disposeBag = DisposeBag()
     
     init(presenter: DetailPresenterType) {
@@ -27,6 +28,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupPresenter()
     }
 }
 
@@ -37,6 +39,13 @@ private extension DetailViewController {
         navigationItem.title = LocalizedString.post.localize()
         let image: UIImage = presenter.isFavorite ? #imageLiteral(resourceName: "check-star-icon") : #imageLiteral(resourceName: "uncheck-star-icon")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(updateFavoriteStatus))
+        dataSource.delegate = presenter
+        postTableView.dataSource = dataSource
+        postTableView.registerNibForCell(with: PostDescriptionCell.self)
+        postTableView.registerNibForCell(with: UserInformationCell.self)
+        postTableView.rowHeight = UITableViewAutomaticDimension
+        postTableView.estimatedRowHeight = 44.0
+        postTableView.tableFooterView = UIView()
     }
     
     @objc func updateFavoriteStatus() {

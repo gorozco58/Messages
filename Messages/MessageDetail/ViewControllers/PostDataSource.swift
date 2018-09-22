@@ -21,7 +21,7 @@ class PostDataSource: NSObject {
 extension PostDataSource: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +35,20 @@ extension PostDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell(frame: .zero)
+        guard let delegate = delegate else { return UITableViewCell(frame: .zero) }
+        switch indexPath.section {
+        case 0:
+            let post = delegate.postDetails.post
+            let cell = tableView.dequeueReusableCell(with: PostDescriptionCell.self, forIndexPath: indexPath)
+            cell.updateView(with: post)
+            return cell
+        case 1:
+            let user = delegate.postDetails.user
+            let cell = tableView.dequeueReusableCell(with: UserInformationCell.self, forIndexPath: indexPath)
+            cell.updateView(with: user)
+            return cell
+        default:
+            return UITableViewCell(frame: .zero)
+        }
     }
 }

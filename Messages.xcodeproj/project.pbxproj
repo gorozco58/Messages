@@ -47,6 +47,10 @@
 		88635D9E2156EF6F00CD2791 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D9D2156EF6F00CD2791 /* PostDetail.swift */; };
 		88635DA02156EF9000CD2791 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635D9F2156EF9000CD2791 /* User.swift */; };
 		88635DA22156F08B00CD2791 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DA12156F08B00CD2791 /* Comment.swift */; };
+		88635DA62156FE0600CD2791 /* PostDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DA42156FE0600CD2791 /* PostDescriptionCell.swift */; };
+		88635DA72156FE0600CD2791 /* PostDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DA52156FE0600CD2791 /* PostDescriptionCell.xib */; };
+		88635DAC2157014900CD2791 /* UserInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DAA2157014900CD2791 /* UserInformationCell.swift */; };
+		88635DAD2157014900CD2791 /* UserInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DAB2157014900CD2791 /* UserInformationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,10 @@
 		88635D9D2156EF6F00CD2791 /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
 		88635D9F2156EF9000CD2791 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88635DA12156F08B00CD2791 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		88635DA42156FE0600CD2791 /* PostDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDescriptionCell.swift; sourceTree = "<group>"; };
+		88635DA52156FE0600CD2791 /* PostDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDescriptionCell.xib; sourceTree = "<group>"; };
+		88635DAA2157014900CD2791 /* UserInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationCell.swift; sourceTree = "<group>"; };
+		88635DAB2157014900CD2791 /* UserInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInformationCell.xib; sourceTree = "<group>"; };
 		EE098D4C302A8F5A183162E3 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -358,6 +366,7 @@
 		88635D892156CB5800CD2791 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				88635DA32156FDE300CD2791 /* Cells */,
 				88635D972156CE4300CD2791 /* DetailViewController.swift */,
 				88635D982156CE4300CD2791 /* DetailViewController.xib */,
 				88635D9B2156EEB800CD2791 /* PostDataSource.swift */,
@@ -372,6 +381,17 @@
 				88635D952156CC7A00CD2791 /* DetailTransition.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		88635DA32156FDE300CD2791 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88635DA42156FE0600CD2791 /* PostDescriptionCell.swift */,
+				88635DA52156FE0600CD2791 /* PostDescriptionCell.xib */,
+				88635DAA2157014900CD2791 /* UserInformationCell.swift */,
+				88635DAB2157014900CD2791 /* UserInformationCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A4959A17C373858DF6C54F37 /* Pods */ = {
@@ -490,10 +510,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88635DA72156FE0600CD2791 /* PostDescriptionCell.xib in Resources */,
 				88635CFD21566D2000CD2791 /* LaunchScreen.storyboard in Resources */,
 				88635D9A2156CE4300CD2791 /* DetailViewController.xib in Resources */,
 				88635D652156951800CD2791 /* Localizable.strings in Resources */,
 				88635CFA21566D2000CD2791 /* Assets.xcassets in Resources */,
+				88635DAD2157014900CD2791 /* UserInformationCell.xib in Resources */,
 				88635D5121567CC700CD2791 /* HomeViewController.xib in Resources */,
 				88635D712156A00E00CD2791 /* PostInformationCell.xib in Resources */,
 			);
@@ -586,6 +608,7 @@
 				88635D9E2156EF6F00CD2791 /* PostDetail.swift in Sources */,
 				88635D5321567CC700CD2791 /* HomeInteractorType.swift in Sources */,
 				88635D962156CC7A00CD2791 /* DetailTransition.swift in Sources */,
+				88635DAC2157014900CD2791 /* UserInformationCell.swift in Sources */,
 				88635D5721567D5500CD2791 /* MainTransition.swift in Sources */,
 				88635D772156A52600CD2791 /* OptionalType.swift in Sources */,
 				88635DA22156F08B00CD2791 /* Comment.swift in Sources */,
@@ -593,6 +616,7 @@
 				88635D852156CB4800CD2791 /* MessageDetailModule.swift in Sources */,
 				88635D922156CC2500CD2791 /* DetailPresenter.swift in Sources */,
 				88635D5021567CC700CD2791 /* HomePresenter.swift in Sources */,
+				88635DA62156FE0600CD2791 /* PostDescriptionCell.swift in Sources */,
 				88635D902156CC1200CD2791 /* DetailPresenterType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

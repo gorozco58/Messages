@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct User: Codable, Mockable {
+protocol UserInformationType {
+    var name: String { get }
+    var email: String { get }
+    var phone: String { get }
+    var website: String { get }
+}
+
+struct User: Codable, Mockable, UserInformationType {
     let userId: Int?
     let name: String
     let email: String
