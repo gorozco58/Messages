@@ -1,7 +1,7 @@
 <img src="assets/messages-icon.png" alt="Messages 2018" width="36" height="36"> Messages test app by Giovanny Orozco
 ======================================
 
- ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg) ![RxSwift](https://img.shields.io/cocoapods/v/RxSwift.svg) [RxCocoa](https://img.shields.io/cocoapods/v/RxCocoa.svg) [Alamofire](https://img.shields.io/cocoapods/v/Alamofire.svg)
+ ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg)
  
 Messages app is a open source test app under MIT License. Here you can find s simple app using table views, networking services with [Alamofile](https://cocoapods.org/pods/Alamofire) Library and clean architecture convined with [RxSwfit](https://cocoapods.org/pods/RxSwift) and [RxCocoa](https://cocoapods.org/pods/RxCocoa).  
 
