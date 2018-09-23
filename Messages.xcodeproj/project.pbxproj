@@ -55,6 +55,8 @@
 		88635DB12157123900CD2791 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DAF2157123900CD2791 /* CommentCell.xib */; };
 		88635DB32157162000CD2791 /* CommentsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DB22157162000CD2791 /* CommentsHeaderView.swift */; };
 		88635DB52157163F00CD2791 /* CommentsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DB42157163F00CD2791 /* CommentsHeaderView.xib */; };
+		88635DB821571A5000CD2791 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 88635DB621571A5000CD2791 /* LICENSE */; };
+		88635DB921571A5000CD2791 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 88635DB721571A5000CD2791 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		88635DAF2157123900CD2791 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		88635DB22157162000CD2791 /* CommentsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsHeaderView.swift; sourceTree = "<group>"; };
 		88635DB42157163F00CD2791 /* CommentsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsHeaderView.xib; sourceTree = "<group>"; };
+		88635DB621571A5000CD2791 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		88635DB721571A5000CD2791 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EE098D4C302A8F5A183162E3 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +176,8 @@
 		88635CE621566D1F00CD2791 = {
 			isa = PBXGroup;
 			children = (
+				88635DB621571A5000CD2791 /* LICENSE */,
+				88635DB721571A5000CD2791 /* README.md */,
 				88635CF121566D1F00CD2791 /* Messages */,
 				88635D0621566D2000CD2791 /* MessagesTests */,
 				88635D1121566D2000CD2791 /* MessagesUITests */,
@@ -527,6 +533,8 @@
 				88635D9A2156CE4300CD2791 /* DetailViewController.xib in Resources */,
 				88635D652156951800CD2791 /* Localizable.strings in Resources */,
 				88635CFA21566D2000CD2791 /* Assets.xcassets in Resources */,
+				88635DB821571A5000CD2791 /* LICENSE in Resources */,
+				88635DB921571A5000CD2791 /* README.md in Resources */,
 				88635DAD2157014900CD2791 /* UserInformationCell.xib in Resources */,
 				88635DB12157123900CD2791 /* CommentCell.xib in Resources */,
 				88635D5121567CC700CD2791 /* HomeViewController.xib in Resources */,
