@@ -35,7 +35,7 @@ extension HomePresenter: HomePresenterType {
     func searchAllPosts() {
         interactor
             .searchAllPosts()
-            .delay(5, scheduler: MainScheduler.instance)//uncomment for test loading views
+            //.delay(5, scheduler: MainScheduler.instance)//uncomment for test loading views
             .startWith(interactor.createLoadingPosts())
             .subscribe(onNext: {
                 self.interactor.updatePosts($0)
