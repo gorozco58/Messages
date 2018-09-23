@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommentsHeaderView" customModule="Messages" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sT4-qk-diS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXR-K3-TMQ">
+                            <rect key="frame" x="20" y="14" width="335" height="21"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AXR-K3-TMQ" firstAttribute="centerY" secondItem="sT4-qk-diS" secondAttribute="centerY" id="4Vw-Sn-a7X"/>
+                        <constraint firstItem="AXR-K3-TMQ" firstAttribute="leading" secondItem="sT4-qk-diS" secondAttribute="leading" constant="20" id="OHc-nl-H47"/>
+                        <constraint firstAttribute="trailing" secondItem="AXR-K3-TMQ" secondAttribute="trailing" constant="20" id="tuG-kr-xV4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="sT4-qk-diS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7yu-SW-OVT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sT4-qk-diS" secondAttribute="trailing" id="MEz-Wd-WZ4"/>
+                <constraint firstItem="sT4-qk-diS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TRn-TY-DyH"/>
+                <constraint firstAttribute="bottom" secondItem="sT4-qk-diS" secondAttribute="bottom" id="WN5-L5-Zve"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="titleLabel" destination="AXR-K3-TMQ" id="9GJ-Um-cIl"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-255"/>
+        </view>
+    </objects>
+</document>

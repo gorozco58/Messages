@@ -51,6 +51,10 @@
 		88635DA72156FE0600CD2791 /* PostDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DA52156FE0600CD2791 /* PostDescriptionCell.xib */; };
 		88635DAC2157014900CD2791 /* UserInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DAA2157014900CD2791 /* UserInformationCell.swift */; };
 		88635DAD2157014900CD2791 /* UserInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DAB2157014900CD2791 /* UserInformationCell.xib */; };
+		88635DB02157123900CD2791 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DAE2157123900CD2791 /* CommentCell.swift */; };
+		88635DB12157123900CD2791 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DAF2157123900CD2791 /* CommentCell.xib */; };
+		88635DB32157162000CD2791 /* CommentsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88635DB22157162000CD2791 /* CommentsHeaderView.swift */; };
+		88635DB52157163F00CD2791 /* CommentsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88635DB42157163F00CD2791 /* CommentsHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +128,10 @@
 		88635DA52156FE0600CD2791 /* PostDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDescriptionCell.xib; sourceTree = "<group>"; };
 		88635DAA2157014900CD2791 /* UserInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationCell.swift; sourceTree = "<group>"; };
 		88635DAB2157014900CD2791 /* UserInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInformationCell.xib; sourceTree = "<group>"; };
+		88635DAE2157123900CD2791 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		88635DAF2157123900CD2791 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		88635DB22157162000CD2791 /* CommentsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsHeaderView.swift; sourceTree = "<group>"; };
+		88635DB42157163F00CD2791 /* CommentsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsHeaderView.xib; sourceTree = "<group>"; };
 		EE098D4C302A8F5A183162E3 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -390,6 +398,10 @@
 				88635DA52156FE0600CD2791 /* PostDescriptionCell.xib */,
 				88635DAA2157014900CD2791 /* UserInformationCell.swift */,
 				88635DAB2157014900CD2791 /* UserInformationCell.xib */,
+				88635DAE2157123900CD2791 /* CommentCell.swift */,
+				88635DAF2157123900CD2791 /* CommentCell.xib */,
+				88635DB22157162000CD2791 /* CommentsHeaderView.swift */,
+				88635DB42157163F00CD2791 /* CommentsHeaderView.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -516,8 +528,10 @@
 				88635D652156951800CD2791 /* Localizable.strings in Resources */,
 				88635CFA21566D2000CD2791 /* Assets.xcassets in Resources */,
 				88635DAD2157014900CD2791 /* UserInformationCell.xib in Resources */,
+				88635DB12157123900CD2791 /* CommentCell.xib in Resources */,
 				88635D5121567CC700CD2791 /* HomeViewController.xib in Resources */,
 				88635D712156A00E00CD2791 /* PostInformationCell.xib in Resources */,
+				88635DB52157163F00CD2791 /* CommentsHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +607,9 @@
 				88635D822156AA1300CD2791 /* UITableViewExtension.swift in Sources */,
 				88635D7B2156A55C00CD2791 /* ServiceUrl.swift in Sources */,
 				88635D802156A5AE00CD2791 /* UIColorExtension.swift in Sources */,
+				88635DB32157162000CD2791 /* CommentsHeaderView.swift in Sources */,
 				88635DA02156EF9000CD2791 /* User.swift in Sources */,
+				88635DB02157123900CD2791 /* CommentCell.swift in Sources */,
 				88635D992156CE4300CD2791 /* DetailViewController.swift in Sources */,
 				88635D702156A00E00CD2791 /* PostInformationCell.swift in Sources */,
 				88635D7D2156A55C00CD2791 /* RoutingType.swift in Sources */,

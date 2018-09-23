@@ -16,12 +16,11 @@ class PostDataSource: NSObject {
     weak var delegate: PostDataSourceDelegate?
 }
 
-//MARK: -
 //MARK: - UITableViewDataSource
 extension PostDataSource: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +47,29 @@ extension PostDataSource: UITableViewDataSource {
             cell.updateView(with: user)
             return cell
         default:
-            return UITableViewCell(frame: .zero)
+            let comment = delegate.postDetails.comments[indexPath.row]
+            let cell = tableView.dequeueReusableCell(with: CommentCell.self, forIndexPath: indexPath)
+            cell.updateView(with: comment.body, isMock: comment.isMock)
+            return cell
+        }
+    }
+}
+
+//MARK: - UITableViewDelegate
+extension PostDataSource: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 2 ? 40 : 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch section {
+        case 2:
+            let headerView = tableView.dequeueReusableHeaderFooterView(with: CommentsHeaderView.self)
+            headerView.updateView(with: LocalizedString.comments.localize())
+            return headerView
+        default:
+            return nil
         }
     }
 }

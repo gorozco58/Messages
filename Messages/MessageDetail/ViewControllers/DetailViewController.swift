@@ -41,8 +41,11 @@ private extension DetailViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(updateFavoriteStatus))
         dataSource.delegate = presenter
         postTableView.dataSource = dataSource
+        postTableView.delegate = dataSource
         postTableView.registerNibForCell(with: PostDescriptionCell.self)
         postTableView.registerNibForCell(with: UserInformationCell.self)
+        postTableView.registerNibForCell(with: CommentCell.self)
+        postTableView.registerNibForHeaderFooter(with: CommentsHeaderView.self)
         postTableView.rowHeight = UITableViewAutomaticDimension
         postTableView.estimatedRowHeight = 44.0
         postTableView.tableFooterView = UIView()

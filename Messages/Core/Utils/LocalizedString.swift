@@ -19,6 +19,7 @@ enum LocalizedString: String {
     case cancel
     case description
     case user
+    case comments
     
     private static let errorCopy: String = "**ERROR*COPY**"
     

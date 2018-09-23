@@ -1,5 +1,5 @@
 //
-//  UserInformationCell.swift
+//  CommentCell.swift
 //  Messages
 //
 //  Created by Giovanny Orozco on 9/22/18.
@@ -8,27 +8,19 @@
 
 import UIKit
 
-class UserInformationCell: UITableViewCell {
+class CommentCell: UITableViewCell {
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var emailLabel: UILabel!
-    @IBOutlet private weak var phoneLabel: UILabel!
-    @IBOutlet private weak var websiteLabel: UILabel!
+    @IBOutlet private weak var commentLabel: UILabel!
     @IBOutlet private var loaderViews: [GradientLoaderView]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        titleLabel.text = LocalizedString.user.localize()
     }
-
-    func updateView(with information: Mockable & UserInformationType) {
-        configureLoadingViews(loading: information.isMock)
-        nameLabel.text = information.name
-        emailLabel.text = information.email
-        phoneLabel.text = information.phone
-        websiteLabel.text = information.website
+    
+    func updateView(with comment: String, isMock: Bool) {
+        configureLoadingViews(loading: isMock)
+        commentLabel.text = comment
     }
     
     private func configureLoadingViews(loading isLoading: Bool = true) {
